@@ -3,25 +3,71 @@
 @theme {
   --font-futuristic: 'Orbitron', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --font-nastaliq: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', Tahoma, serif;
 }
 
 @layer base {
-  :root, [data-theme='neon-cyan'] {
-    --theme-primary: #22d3ee;
-    --theme-secondary: #06b6d4;
-    --theme-accent: #0891b2;
-    --theme-dark: #0e7490;
-    --theme-glow: rgba(6, 182, 212, 0.5);
-    --theme-glow-strong: rgba(34, 211, 238, 0.8);
-    --theme-glow-soft: rgba(6, 182, 212, 0.2);
-    --theme-border: rgba(6, 182, 212, 0.3);
-    --theme-border-subtle: rgba(6, 182, 212, 0.15);
-    --theme-bg-subtle: rgba(6, 182, 212, 0.08);
-    --theme-bg-glass: rgba(15, 23, 42, 0.7);
-    --theme-grid-dot: #06b6d4;
-    --theme-badge-bg: rgba(6, 182, 212, 0.15);
-    --theme-text-light: #cffafe;
+  :root, [data-theme='neural-aurora'], [data-theme='urfi-futuristic'], [data-theme='neon-cyan'] {
+    --theme-primary: #00f0ff;
+    --theme-secondary: #a855f7;
+    --theme-accent: #c084fc;
+    --theme-dark: #050811;
+    --theme-glow: rgba(0, 240, 255, 0.3);
+    --theme-glow-strong: rgba(0, 240, 255, 0.6);
+    --theme-glow-soft: rgba(168, 85, 247, 0.2);
+    --theme-border: rgba(0, 240, 255, 0.18);
+    --theme-border-subtle: rgba(0, 240, 255, 0.08);
+    --theme-bg-subtle: rgba(0, 240, 255, 0.04);
+    --theme-bg-glass: rgba(7, 12, 26, 0.65);
+    --theme-bg-panel: rgba(5, 8, 17, 0.92);
+    --theme-page-bg: #040711;
+    --theme-page-text: #ffffff;
+    --theme-grid-dot: #00f0ff;
+    --theme-badge-bg: rgba(0, 240, 255, 0.1);
+    --theme-text-light: #e6f9ff;
     --theme-text-mid: #67e8f9;
+  }
+
+  [data-theme='dark'] {
+    --theme-primary: #38bdf8;
+    --theme-secondary: #64748b;
+    --theme-accent: #0284c7;
+    --theme-dark: #0f172a;
+    --theme-glow: rgba(56, 189, 248, 0.4);
+    --theme-glow-strong: rgba(56, 189, 248, 0.7);
+    --theme-glow-soft: rgba(56, 189, 248, 0.15);
+    --theme-border: rgba(148, 163, 184, 0.2);
+    --theme-border-subtle: rgba(148, 163, 184, 0.1);
+    --theme-bg-subtle: rgba(148, 163, 184, 0.05);
+    --theme-bg-glass: rgba(15, 23, 42, 0.8);
+    --theme-bg-panel: rgba(15, 23, 42, 0.92);
+    --theme-page-bg: #0b0f19;
+    --theme-page-text: #e2e8f0;
+    --theme-grid-dot: #38bdf8;
+    --theme-badge-bg: rgba(56, 189, 248, 0.12);
+    --theme-text-light: #e0f2fe;
+    --theme-text-mid: #7dd3fc;
+  }
+
+  [data-theme='light'] {
+    --theme-primary: #0284c7;
+    --theme-secondary: #0369a1;
+    --theme-accent: #075985;
+    --theme-dark: #e0f2fe;
+    --theme-glow: rgba(2, 132, 199, 0.25);
+    --theme-glow-strong: rgba(2, 132, 199, 0.5);
+    --theme-glow-soft: rgba(2, 132, 199, 0.1);
+    --theme-border: rgba(2, 132, 199, 0.2);
+    --theme-border-subtle: rgba(2, 132, 199, 0.12);
+    --theme-bg-subtle: rgba(2, 132, 199, 0.06);
+    --theme-bg-glass: rgba(255, 255, 255, 0.85);
+    --theme-bg-panel: rgba(255, 255, 255, 0.95);
+    --theme-page-bg: #f8fafc;
+    --theme-page-text: #0f172a;
+    --theme-grid-dot: #0284c7;
+    --theme-badge-bg: rgba(2, 132, 199, 0.1);
+    --theme-text-light: #0369a1;
+    --theme-text-mid: #0284c7;
   }
 
   [data-theme='sunset-gold'] {
@@ -35,7 +81,10 @@
     --theme-border: rgba(245, 158, 11, 0.3);
     --theme-border-subtle: rgba(245, 158, 11, 0.15);
     --theme-bg-subtle: rgba(245, 158, 11, 0.08);
-    --theme-bg-glass: rgba(26, 18, 10, 0.7);
+    --theme-bg-glass: rgba(26, 18, 10, 0.75);
+    --theme-bg-panel: rgba(26, 18, 10, 0.9);
+    --theme-page-bg: #140d07;
+    --theme-page-text: #fef3c7;
     --theme-grid-dot: #f59e0b;
     --theme-badge-bg: rgba(245, 158, 11, 0.15);
     --theme-text-light: #fef3c7;
@@ -53,7 +102,10 @@
     --theme-border: rgba(168, 85, 247, 0.3);
     --theme-border-subtle: rgba(168, 85, 247, 0.15);
     --theme-bg-subtle: rgba(168, 85, 247, 0.08);
-    --theme-bg-glass: rgba(23, 14, 38, 0.7);
+    --theme-bg-glass: rgba(23, 14, 38, 0.75);
+    --theme-bg-panel: rgba(23, 14, 38, 0.9);
+    --theme-page-bg: #12091c;
+    --theme-page-text: #f3e8ff;
     --theme-grid-dot: #a855f7;
     --theme-badge-bg: rgba(168, 85, 247, 0.15);
     --theme-text-light: #f3e8ff;
@@ -62,8 +114,8 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #020617;
-    color: #e2e8f0;
+    background-color: var(--theme-page-bg, #020617);
+    color: var(--theme-page-text, #f1f5f9);
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -82,12 +134,6 @@
   .text-glow-theme {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 15px var(--theme-glow-strong), 0 0 25px var(--theme-glow);
   }
-  .glow-cyan {
-    box-shadow: 0 0 15px var(--theme-glow);
-  }
-  .text-glow-cyan {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 15px var(--theme-glow-strong), 0 0 25px var(--theme-glow);
-  }
   .animate-pulse-slow {
     animation: pulse-slow 3s ease-in-out infinite;
   }
@@ -104,8 +150,8 @@
     text-shadow: 0 0 8px var(--theme-glow-strong, rgba(34, 211, 238, 0.6));
   }
   .glass-panel {
-    background: var(--theme-bg-glass, rgba(15, 23, 42, 0.6));
-    backdrop-filter: blur(12px);
+    background: var(--theme-bg-glass, rgba(15, 23, 42, 0.75));
+    backdrop-filter: blur(16px);
     border: 1px solid var(--theme-border, rgba(6, 182, 212, 0.2));
     transition: border-color 0.4s ease, background 0.4s ease;
   }
@@ -123,6 +169,346 @@
   50% { transform: scale(1.05); opacity: 1; }
 }
 
+/* Urfi Mood Indicator CSS Keyframes */
+@keyframes moodShiftGlow {
+  0% { 
+    transform: scale(0.96); 
+    box-shadow: 0 0 4px var(--mood-glow), 0 0 0 0 var(--mood-glow);
+    filter: brightness(1.4) saturate(1.3);
+  }
+  35% { 
+    transform: scale(1.08); 
+    box-shadow: 0 0 22px var(--mood-glow), 0 0 0 6px var(--mood-pulse-ring);
+    filter: brightness(1.2) saturate(1.2);
+  }
+  70% { 
+    transform: scale(0.99); 
+    box-shadow: 0 0 14px var(--mood-glow), 0 0 0 2px var(--mood-pulse-ring);
+  }
+  100% { 
+    transform: scale(1); 
+    box-shadow: 0 0 10px var(--mood-glow);
+    filter: brightness(1) saturate(1);
+  }
+}
+
+@keyframes moodPulseRing {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.9;
+    box-shadow: 0 0 0 0 var(--mood-glow);
+  }
+  60% {
+    transform: scale(1.6);
+    opacity: 0.25;
+    box-shadow: 0 0 18px 8px var(--mood-glow);
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+@keyframes moodBeaconPing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+
+@keyframes moodIconPop {
+  0% {
+    transform: scale(0.5) rotate(-20deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.25) rotate(6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes moodColorWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.urfi-mood-shifting {
+  animation: moodShiftGlow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.urfi-mood-pulse-ring {
+  animation: moodPulseRing 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.urfi-mood-icon-pop {
+  animation: moodIconPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ============================================================
+   NeuralCore Mood Shift Specific Animations
+   ============================================================ */
+
+/* 1. Calm Blue Shift ('focused' - Pur-Azm) */
+@keyframes neuralMoodBlueShift {
+  0% {
+    transform: scale(0.97);
+    filter: brightness(1) drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
+  }
+  25% {
+    transform: scale(1.05);
+    filter: brightness(1.25) drop-shadow(0 0 35px rgba(37, 99, 235, 0.85));
+  }
+  55% {
+    transform: scale(0.99);
+    filter: brightness(1.15) drop-shadow(0 0 24px rgba(59, 130, 246, 0.7));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 16px rgba(59, 130, 246, 0.5));
+  }
+}
+
+/* 2. Warm Amber Pulse ('empathetic' - Hamdardana) */
+@keyframes neuralMoodAmberPulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 10px rgba(245, 158, 11, 0.4));
+  }
+  20% {
+    transform: scale(1.06);
+    filter: brightness(1.3) drop-shadow(0 0 36px rgba(245, 158, 11, 0.9));
+  }
+  38% {
+    transform: scale(1.01);
+    filter: brightness(1.1) drop-shadow(0 0 18px rgba(245, 158, 11, 0.6));
+  }
+  56% {
+    transform: scale(1.09);
+    filter: brightness(1.35) drop-shadow(0 0 42px rgba(251, 191, 36, 0.95));
+  }
+  80% {
+    transform: scale(1.02);
+    filter: brightness(1.15) drop-shadow(0 0 24px rgba(245, 158, 11, 0.65));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 16px rgba(245, 158, 11, 0.5));
+  }
+}
+
+/* 3. Creative Golden Flare ('creative' - Takhleeqi) */
+@keyframes neuralMoodCreativeShimmer {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1) drop-shadow(0 0 12px rgba(245, 158, 11, 0.4));
+  }
+  30% {
+    transform: scale(1.08) rotate(4deg);
+    filter: brightness(1.35) drop-shadow(0 0 38px rgba(236, 72, 153, 0.85));
+  }
+  65% {
+    transform: scale(1.03) rotate(-3deg);
+    filter: brightness(1.2) drop-shadow(0 0 28px rgba(245, 158, 11, 0.75));
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1) drop-shadow(0 0 16px rgba(245, 158, 11, 0.5));
+  }
+}
+
+/* 4. Precision Cyan Scan ('analytical' - Tajziyati) */
+@keyframes neuralMoodCyanScan {
+  0% {
+    transform: scale(0.96);
+    filter: brightness(1) drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
+  }
+  30% {
+    transform: scale(1.06);
+    filter: brightness(1.3) contrast(1.15) drop-shadow(0 0 34px rgba(6, 182, 212, 0.9));
+  }
+  70% {
+    transform: scale(0.99);
+    filter: brightness(1.15) drop-shadow(0 0 22px rgba(6, 182, 212, 0.7));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 16px rgba(6, 182, 212, 0.5));
+  }
+}
+
+/* 5. Emerald Bloom ('cheerful' / 'happy' - Khush-Gawaar) */
+@keyframes neuralMoodEmeraldBloom {
+  0% {
+    transform: scale(0.98);
+    filter: brightness(1) drop-shadow(0 0 10px rgba(16, 185, 129, 0.4));
+  }
+  35% {
+    transform: scale(1.09);
+    filter: brightness(1.3) drop-shadow(0 0 38px rgba(16, 185, 129, 0.9));
+  }
+  70% {
+    transform: scale(1.02);
+    filter: brightness(1.15) drop-shadow(0 0 24px rgba(16, 185, 129, 0.65));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 16px rgba(16, 185, 129, 0.5));
+  }
+}
+
+/* 6. Tranquil Teal Tide ('serene' - Pursukoon) */
+@keyframes neuralMoodTealTide {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 10px rgba(20, 184, 166, 0.4));
+  }
+  45% {
+    transform: scale(1.05);
+    filter: brightness(1.2) drop-shadow(0 0 30px rgba(20, 184, 166, 0.8));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 15px rgba(20, 184, 166, 0.5));
+  }
+}
+
+/* 7. Protective Rose Care ('concerned' - Fikarmand) */
+@keyframes neuralMoodRoseCare {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 10px rgba(244, 63, 94, 0.4));
+  }
+  30% {
+    transform: scale(1.06);
+    filter: brightness(1.25) drop-shadow(0 0 32px rgba(244, 63, 94, 0.85));
+  }
+  60% {
+    transform: scale(1.01);
+    filter: brightness(1.1) drop-shadow(0 0 20px rgba(244, 63, 94, 0.6));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 15px rgba(244, 63, 94, 0.5));
+  }
+}
+
+/* 8. Harmonic Equilibrium ('neutral' - Mutawazan) */
+@keyframes neuralMoodNeutralBalance {
+  0% {
+    transform: scale(0.98);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.03);
+    filter: brightness(1.15) drop-shadow(0 0 25px rgba(14, 165, 233, 0.7));
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* Expanding Aura Ripple for Mood Wave on NeuralCore */
+@keyframes neuralCoreMoodRipple {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.95);
+    opacity: 0;
+  }
+}
+
+/* Floating Holographic Mood Shift Badge */
+@keyframes neuralMoodHoloBadge {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 14px) scale(0.85);
+    filter: blur(4px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -8px) scale(1.04);
+    filter: blur(0);
+  }
+  35% {
+    transform: translate(-50%, -12px) scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -14px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -24px) scale(0.92);
+    filter: blur(3px);
+  }
+}
+
+.neural-mood-focused {
+  animation: neuralMoodBlueShift 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-empathetic {
+  animation: neuralMoodAmberPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-creative {
+  animation: neuralMoodCreativeShimmer 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-analytical {
+  animation: neuralMoodCyanScan 2.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-cheerful,
+.neural-mood-happy {
+  animation: neuralMoodEmeraldBloom 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-serene {
+  animation: neuralMoodTealTide 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-concerned {
+  animation: neuralMoodRoseCare 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-mood-neutral {
+  animation: neuralMoodNeutralBalance 2.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.neural-core-mood-ripple {
+  animation: neuralCoreMoodRipple 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.neural-mood-holo-badge {
+  animation: neuralMoodHoloBadge 2.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -134,3 +520,45 @@
 ::-webkit-scrollbar-thumb:hover { 
   background: var(--theme-border, rgba(6, 182, 212, 0.4)); 
 }
+
+/* ============================================================
+   Nastaliq & Roman Urdu Response Script Typographic Classes
+   ============================================================ */
+
+.font-nastaliq {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', Tahoma, serif;
+  line-height: 2.15;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.urdu-bubble-nastaliq {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', Tahoma, serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 2.25;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  word-spacing: 2px;
+}
+
+.urdu-bubble-nastaliq p,
+.urdu-bubble-nastaliq span {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.roman-bubble-script {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  direction: ltr;
+  text-align: left;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+/* Smooth badge glow for script toggles */
+.script-toggle-glow {
+  box-shadow: 0 0 16px var(--theme-glow, rgba(0, 240, 255, 0.4));
+}
+

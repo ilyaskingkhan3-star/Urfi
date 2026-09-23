@@ -1,4 +1,4 @@
-export type ThemeId = 'neon-cyan' | 'sunset-gold' | 'cyber-violet';
+export type ThemeId = 'neural-aurora' | 'urfi-futuristic' | 'dark' | 'light' | 'sunset-gold' | 'cyber-violet';
 
 export interface ThemeConfig {
   id: ThemeId;
@@ -12,23 +12,67 @@ export interface ThemeConfig {
   glowColor: string;
   glowStrong: string;
   personality: string;
+  isLight?: boolean;
   previewColors: string[];
 }
 
 export const THEMES: Record<ThemeId, ThemeConfig> = {
-  'neon-cyan': {
-    id: 'neon-cyan',
-    name: 'Neon Cyan',
-    subtitle: 'Precision Cybernetic Pulse',
-    badge: 'Neural Default',
+  'neural-aurora': {
+    id: 'neural-aurora',
+    name: 'Neural Aurora',
+    subtitle: 'Futuristic AI',
+    badge: 'Neural Aurora',
+    primaryColor: '#00f0ff',
+    secondaryColor: '#a855f7',
+    accentColor: '#c084fc',
+    darkColor: '#050811',
+    glowColor: 'rgba(0, 240, 255, 0.35)',
+    glowStrong: 'rgba(0, 240, 255, 0.7)',
+    personality: 'Next-generation AI interface with midnight-black depth, electric cyan, and soft violet aurora.',
+    previewColors: ['#00f0ff', '#a855f7', '#050811', '#080d1e'],
+  },
+  'urfi-futuristic': {
+    id: 'urfi-futuristic',
+    name: 'URFI Futuristic',
+    subtitle: 'Cybernetic Neon Pulse',
+    badge: 'Signature',
     primaryColor: '#22d3ee',
     secondaryColor: '#06b6d4',
     accentColor: '#0891b2',
     darkColor: '#0e7490',
     glowColor: 'rgba(6, 182, 212, 0.5)',
     glowStrong: 'rgba(34, 211, 238, 0.8)',
-    personality: 'Analytical, calm, and razor-sharp with crystalline cybernetic feedback.',
+    personality: 'Futuristic AI assistant with neon cyan glowing accents and dark navy matrix.',
     previewColors: ['#22d3ee', '#06b6d4', '#0891b2', '#020617'],
+  },
+  'dark': {
+    id: 'dark',
+    name: 'Dark Mode',
+    subtitle: 'Minimal Deep Slate',
+    badge: 'Stealth',
+    primaryColor: '#38bdf8',
+    secondaryColor: '#64748b',
+    accentColor: '#475569',
+    darkColor: '#1e293b',
+    glowColor: 'rgba(56, 189, 248, 0.4)',
+    glowStrong: 'rgba(56, 189, 248, 0.7)',
+    personality: 'Clean, understated dark theme engineered for long nocturnal sessions.',
+    previewColors: ['#38bdf8', '#94a3b8', '#334155', '#090d16'],
+  },
+  'light': {
+    id: 'light',
+    name: 'Light Mode',
+    subtitle: 'Crisp High-Contrast Daylight',
+    badge: 'Clean Day',
+    primaryColor: '#0284c7',
+    secondaryColor: '#0369a1',
+    accentColor: '#075985',
+    darkColor: '#e0f2fe',
+    glowColor: 'rgba(2, 132, 199, 0.25)',
+    glowStrong: 'rgba(2, 132, 199, 0.5)',
+    personality: 'Bright, highly legible daytime interface with cool sapphire highlights.',
+    isLight: true,
+    previewColors: ['#0284c7', '#38bdf8', '#e2e8f0', '#f8fafc'],
   },
   'sunset-gold': {
     id: 'sunset-gold',
@@ -60,7 +104,7 @@ export const THEMES: Record<ThemeId, ThemeConfig> = {
   },
 };
 
-export const DEFAULT_THEME: ThemeId = 'neon-cyan';
+export const DEFAULT_THEME: ThemeId = 'neural-aurora';
 
 export function getStoredTheme(): ThemeId {
   if (typeof window === 'undefined') return DEFAULT_THEME;
@@ -68,6 +112,8 @@ export function getStoredTheme(): ThemeId {
   if (stored && THEMES[stored]) {
     return stored;
   }
+  // Backwards compatibility for 'neon-cyan'
+  if (stored === ('neon-cyan' as any)) return 'urfi-futuristic';
   return DEFAULT_THEME;
 }
 
@@ -81,4 +127,11 @@ export function applyThemeToDocument(theme: ThemeId): void {
   if (typeof document === 'undefined') return;
   const root = document.documentElement;
   root.setAttribute('data-theme', theme);
+  if (theme === 'light') {
+    root.classList.remove('dark');
+    root.classList.add('light');
+  } else {
+    root.classList.remove('light');
+    root.classList.add('dark');
+  }
 }
